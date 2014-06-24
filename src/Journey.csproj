@@ -39,8 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="UserJourney.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results\FailureResult.cs" />
+    <Compile Include="Results\ITestResult.cs" />
+    <Compile Include="Results\PendingResult.cs" />
+    <Compile Include="Results\SuccessResult.cs" />
+    <Compile Include="Tests\ITestable.cs" />
+    <Compile Include="Tests\StringExtensions.cs" />
+    <Compile Include="Tests\TestStep.cs" />
+    <Compile Include="Tests\VerifyTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
