@@ -1,4 +1,4 @@
 Journey
 =======
 
-A simple test framework for user journies
+A simple test framework for user journeys
