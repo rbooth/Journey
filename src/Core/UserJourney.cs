@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Journey.Core.Reporting;
 using Journey.Core.Results;
 using NUnit.Framework;
+using UnitTests;
 
 namespace Journey.Core
 {
@@ -110,6 +112,8 @@ namespace Journey.Core
             }
 
             FailIfErrorsExist();
+
+            JourneyRunner.Current.Tests.Add(this);
         }
 
         private void FailIfErrorsExist()
