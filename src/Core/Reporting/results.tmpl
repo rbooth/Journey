@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Acceptance Test Results</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="margin: 5px; padding: 5px;">
+    @{
+        int passed = @Model.Count(x => x.Passed.HasValue && x.Passed.Value);
+        int failed = @Model.Count(x => x.Passed.HasValue && !x.Passed.Value);
+		int pending = @Model.Count(x => !x.Passed.HasValue);
+
+        string css = failed == 0 ? "alert alert-success" : "alert alert-danger";
+            
+        <div class="page-header">
+            <h1>Acceptance Tests Results <small>@passed Passed, @failed Failed, @pending Pending</small></h1>
+            <h6>@DateTime.Now.ToString()</h6>
+        </div>
+    }
+    @foreach (var test in @Model)
+    {
+		string panel = "";
+						if(@test.Passed.HasValue)
+						{
+							panel = test.Passed.Value ? "panel panel-success" : "panel panel-danger";
+						}
+						else
+						{
+							panel = "panel panel-warning";
+						}
+
+        <div class="@panel">
+            <div class="panel-heading">@test.Name</div>
+            <table class="table ">
+                <tbody>
+                     @foreach (var result in @test.Results)
+                    {
+						string icon = "";
+						if(@result.WasSuccess.HasValue)
+						{
+							icon = result.WasSuccess.Value ? "label label-success" : "label label-danger";
+						}
+						else
+						{
+							icon = "label label-warning";
+						}
+
+                        string text = result.Message;
+                        <tr>
+                            <td>@result.TestName</td>
+                            <td tooltip="@result.DetailedMessage"><span class="@icon">@text</span></td>
+                            <td>@result.DetailedMessage</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</body>
+</html>
