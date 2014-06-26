@@ -7,8 +7,8 @@
     <ProjectGuid>{8E6518B1-69DB-4B27-B7E8-5343FC659285}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Reporting</RootNamespace>
-    <AssemblyName>Reporting</AssemblyName>
+    <RootNamespace>Journey.Reporting</RootNamespace>
+    <AssemblyName>Journey.Reporting</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

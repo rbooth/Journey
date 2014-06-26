@@ -7,8 +7,8 @@
     <ProjectGuid>{93931C55-C3F6-40B6-8216-8DB4777F048B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tests</RootNamespace>
-    <AssemblyName>Tests</AssemblyName>
+    <RootNamespace>Journey.Tests</RootNamespace>
+    <AssemblyName>Journey.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,11 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TempTest.cs" />
+    <Compile Include="Results\FailureResultTests.cs" />
+    <Compile Include="Results\PendingResultsTest.cs" />
+    <Compile Include="Results\SuccessResultTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results\TestJourneyStep.cs" />
+    <Compile Include="Results\TestResultsCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{932BB763-879B-47F8-92AD-C0181A68E97E}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
