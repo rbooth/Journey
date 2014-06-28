@@ -23,7 +23,7 @@ namespace Journey.Tests.Integration
 
         private void DoesSoemthing()
         {
-            var x = 2 + 2;
+           
         }
     }
 }

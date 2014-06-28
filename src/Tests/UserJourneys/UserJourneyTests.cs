@@ -6,6 +6,27 @@ namespace Journey.Tests.UserJourneys
     [TestFixture]
     public class UserJourneyTests
     {
+
+        [Test]
+        public void NamesTestFromConstructor()
+        {
+            string name = "Good Name";
+
+            var journey = new UserJourney(name);
+
+            Assert.AreEqual(name, journey.Name);
+        }
+
+        [Test]
+        public void NamesTestFromFluentInterface()
+        {
+            string name = "Good Name";
+
+            var journey = UserJourney.For(name);
+
+            Assert.AreEqual(name, journey.Name);
+        }
+
         [Test]
         public void CreatesResultForAllUserSteps()
         {
@@ -59,17 +80,17 @@ namespace Journey.Tests.UserJourneys
 
         private void DoesSoemthing()
         {
-            var x = 2 + 2;
+          
         }
 
         private void DoesSoemthingElse()
         {
-            var x = 2 + 2;
+            
         }
 
         private void DoesAnotherThing()
         {
-            var x = 2 + 2;
+            
         }
     }
 }
