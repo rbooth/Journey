@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Code\Journey\src\Tests\bin\Debug\Journey.Tests.dll" total="11" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-06-26" time="15:01:49">
+<test-results name="C:\Code\Journey\src\Tests\bin\Debug\Journey.Tests.dll" total="17" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-06-28" time="08:11:45">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.6407" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Code\Journey" machine-name="BOOTH-PC" user="ryan" user-domain="booth-pc" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Code\Journey\src\Tests\bin\Debug\Journey.Tests.dll" executed="True" result="Success" success="True" time="0.102" asserts="0">
+  <test-suite type="Assembly" name="C:\Code\Journey\src\Tests\bin\Debug\Journey.Tests.dll" executed="True" result="Success" success="True" time="0.113" asserts="0">
     <results>
-      <test-suite type="Namespace" name="Journey" executed="True" result="Success" success="True" time="0.086" asserts="0">
+      <test-suite type="Namespace" name="Journey" executed="True" result="Success" success="True" time="0.097" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="0.086" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="0.097" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Results" executed="True" result="Success" success="True" time="0.085" asserts="0">
+              <test-suite type="Namespace" name="Results" executed="True" result="Success" success="True" time="0.096" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="FailureResultTests" executed="True" result="Success" success="True" time="0.071" asserts="0">
+                  <test-suite type="TestFixture" name="FailureResultTests" executed="True" result="Success" success="True" time="0.067" asserts="0">
                     <results>
-                      <test-case name="Journey.Tests.Results.FailureResultTests.DetailedMessageIsExceptionStackTrace" executed="True" result="Success" success="True" time="0.050" asserts="1" />
+                      <test-case name="Journey.Tests.Results.FailureResultTests.DetailedMessageIsExceptionStackTrace" executed="True" result="Success" success="True" time="0.049" asserts="1" />
                       <test-case name="Journey.Tests.Results.FailureResultTests.MessageIsExceptionMessage" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                       <test-case name="Journey.Tests.Results.FailureResultTests.TestNameComesFromConstructor" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                       <test-case name="Journey.Tests.Results.FailureResultTests.WasSuccessfuIsFalse" executed="True" result="Success" success="True" time="0.001" asserts="1" />
@@ -32,6 +32,20 @@
                       <test-case name="Journey.Tests.Results.SuccessResultTests.MessageIsPassed" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                       <test-case name="Journey.Tests.Results.SuccessResultTests.TestNameComesFromConstructor" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                       <test-case name="Journey.Tests.Results.SuccessResultTests.WasSuccessfuIsTrue" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestJourneyStep" executed="True" result="Success" success="True" time="0.005" asserts="0">
+                    <results>
+                      <test-case name="Journey.Tests.Results.TestJourneyStep.ExceptionsCreateFailureResults" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                      <test-case name="Journey.Tests.Results.TestJourneyStep.NoExceptionCreatesSuccessResult" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="Journey.Tests.Results.TestJourneyStep.NotImplementedExceptionCreatesPendingResult" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestResultsCollection" executed="True" result="Success" success="True" time="0.007" asserts="0">
+                    <results>
+                      <test-case name="Journey.Tests.Results.TestResultsCollection.PassedIsFalseWhenAnyFailureResultsExists" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+                      <test-case name="Journey.Tests.Results.TestResultsCollection.PassedIsFalsNullWhenPendingResultExistsWithNoFailures" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                      <test-case name="Journey.Tests.Results.TestResultsCollection.PassedIsTrueNullWhenNoFailureOrPending" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                     </results>
                   </test-suite>
                 </results>

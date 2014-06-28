@@ -5,7 +5,6 @@ using System.Reflection;
 using Journey.Core.Reporting;
 using Journey.Core.Results;
 using NUnit.Framework;
-using UnitTests;
 
 namespace Journey.Core
 {
@@ -105,6 +104,7 @@ namespace Journey.Core
         {
             Console.WriteLine("Running Test: {0}", Name);
             _tests.ForEach(test => Results.Add(test.Execute()));
+            JourneyRunner.Current.Tests.Add(this);
 
             foreach (var testResult in Results)
             {
@@ -112,8 +112,6 @@ namespace Journey.Core
             }
 
             FailIfErrorsExist();
-
-            JourneyRunner.Current.Tests.Add(this);
         }
 
         private void FailIfErrorsExist()

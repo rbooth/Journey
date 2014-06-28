@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Integration\FixtureTesting.cs" />
+    <Compile Include="Integration\PassingJourneys.cs" />
     <Compile Include="Results\FailureResultTests.cs" />
     <Compile Include="Results\PendingResultsTest.cs" />
     <Compile Include="Results\SuccessResultTests.cs" />

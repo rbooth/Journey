@@ -1,8 +1,7 @@
 using System;
-using Journey.Core.Reporting;
 using NUnit.Framework;
 
-namespace UnitTests
+namespace Journey.Core.Reporting
 {
     [SetUpFixture]
     public class JourneyReportingFixture

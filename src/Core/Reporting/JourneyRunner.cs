@@ -23,7 +23,7 @@ namespace Journey.Core.Reporting
 
         public void RunReport()
         {
-            var sr = new StreamReader(@"content\results.tmpl");
+            var sr = new StreamReader(@"Reporting\results.tmpl");
 
             var result = Razor.Parse(sr.ReadToEnd(),Tests);
 

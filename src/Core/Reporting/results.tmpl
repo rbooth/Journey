@@ -7,9 +7,9 @@
 </head>
 <body style="margin: 5px; padding: 5px;">
     @{
-        int passed = @Model.Count(x => x.Passed.HasValue && x.Passed.Value);
-        int failed = @Model.Count(x => x.Passed.HasValue && !x.Passed.Value);
-		int pending = @Model.Count(x => !x.Passed.HasValue);
+        int passed = @Model.Count(x => x.Results.Passed.HasValue && x.Results.Passed.Value);
+        int failed = @Model.Count(x => x.Results.Passed.HasValue && !x.Results.Passed.Value);
+		int pending = @Model.Count(x => !x.Results.Passed.HasValue);
 
         string css = failed == 0 ? "alert alert-success" : "alert alert-danger";
             
@@ -21,9 +21,9 @@
     @foreach (var test in @Model)
     {
 		string panel = "";
-						if(@test.Passed.HasValue)
+						if(@test.Results.Passed.HasValue)
 						{
-							panel = test.Passed.Value ? "panel panel-success" : "panel panel-danger";
+							panel = test.Results.Passed.Value ? "panel panel-success" : "panel panel-danger";
 						}
 						else
 						{
